@@ -24,13 +24,42 @@
     <main>
         <form action="">
             <label for="nombreapellido">Nombre y Apellido</label>
-            <input type="text" id="nombreapellido">
+            <input class="input-padron" type="text" id="nombreapellido" required>
 
             <label for="correoelectronico">Correo Electronico</label>
-            <input type="text" id="correoelectronico">
+            <input class="input-padron" type="email" id="correoelectronico" required placeholder="email@dominio.com">
 
             <label for="telefono">Telefono</label>
-            <input type="text" id="telefono">
+            <input class="input-padron" type="tel" id="telefono" required placeholder="(xx) xxx-xxxx">
+
+            <label for="mensaje">Mensaje</label>
+            <textarea class="input-padron" id="mensaje" cols="70" rows="10" required></textarea>
+
+            <fieldset>
+                <legend>Como le gustaria que lo contactemos?</legend>
+                <label for="radio-email"><input type="radio" name="contacto"
+                     id="radio-email" value="email">Email</label>
+                
+
+                <label for="radio-telefono"><input type="radio" name="contacto"
+                     id="radio-telefono" value="telefono">Telefono</label>
+                
+
+                <label for="radio-whatapp"><input type="radio" name="contacto"
+                     id="radio-whatapp" value="whatapp" checked>Whatapp</label>
+                
+            </fieldset>
+
+            <fieldset>
+                <legend>En cual horario prefiere ser atendido?</legend>
+                <select name="" id="">
+                    <option value="mañana">Mañana</option>
+                    <option value="tarde">Tarde</option>
+                    <option value="noche">Noche</option>
+                </select>
+            </fieldset>
+
+            <label class="checkbox"><input type="checkbox" name="" checked>Le gustaria recibir novedades de la barberia alura?</label>
 
             <input type="submit" value="Enviar formulario">
         </form>
